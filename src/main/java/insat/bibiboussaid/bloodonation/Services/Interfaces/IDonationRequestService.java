@@ -11,4 +11,5 @@ public interface IDonationRequestService {
     public void addRequest(DonationRequest request);
     public void deleteRequest(String id);
     public Optional<DonationRequest> getRequestById(String id);
+    public List<DonationRequest> getDonationRequestsByDonorId(String id);
 }

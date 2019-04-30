@@ -33,7 +33,7 @@ public class Donor {
     private double weight;
     private double height;
 
-//    @OneToMany(mappedBy = "personDonor",fetch = FetchType.LAZY)
-//    @JsonBackReference
-//    List<DonationRequest> donationRequestList;
+    @OneToMany(mappedBy = "personDonor",fetch = FetchType.LAZY)
+    @JsonBackReference
+    List<DonationRequest> donationRequestList;
 }
