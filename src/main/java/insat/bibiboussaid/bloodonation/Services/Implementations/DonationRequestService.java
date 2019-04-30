@@ -25,6 +25,7 @@ public class DonationRequestService implements IDonationRequestService {
 
     @Override
     public void addRequest(DonationRequest request) {
+
         requestRepository.save(request);
     }
 
@@ -38,8 +39,5 @@ public class DonationRequestService implements IDonationRequestService {
         return requestRepository.findById(id);
     }
 
-    @Override
-    public List<DonationRequest> getDonationRequestsByDonorId(String id){
-        return requestRepository.getAllByPersonDonorPersonid(id);
-    }
+
 }

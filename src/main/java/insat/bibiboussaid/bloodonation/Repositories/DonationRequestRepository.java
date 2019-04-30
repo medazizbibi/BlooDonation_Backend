@@ -12,5 +12,4 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:4201")
 public interface DonationRequestRepository extends JpaRepository<DonationRequest,String> {
 
-    public List<DonationRequest> getAllByPersonDonorPersonid(String id);
 }

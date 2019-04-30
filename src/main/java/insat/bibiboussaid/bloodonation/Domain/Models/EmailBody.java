@@ -1,4 +1,4 @@
-package insat.bibiboussaid.bloodonation.Domain;
+package insat.bibiboussaid.bloodonation.Domain.Models;
 
 import lombok.Getter;
 import lombok.Setter;

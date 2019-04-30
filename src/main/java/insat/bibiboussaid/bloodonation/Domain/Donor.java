@@ -4,10 +4,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Getter
@@ -33,11 +30,11 @@ public class Donor {
     private double weight;
     private double height;
 
-    @OneToMany(mappedBy = "personDonor",fetch = FetchType.LAZY)
-    @JsonBackReference
+    @ManyToMany(mappedBy = "donors",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    //@JsonBackReference
     List<DonationRequest> donationRequestList;
 
     @OneToMany(mappedBy = "personDonor",fetch = FetchType.LAZY)
-    @JsonBackReference
+    //@JsonBackReference
     List<Donation> donationsList;
 }

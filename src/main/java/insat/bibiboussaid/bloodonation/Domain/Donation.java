@@ -23,6 +23,5 @@ public class Donation {
     private String donorId;
 
     @ManyToOne(fetch= FetchType.LAZY)
-    @JsonManagedReference
     private Donor personDonor;
 }

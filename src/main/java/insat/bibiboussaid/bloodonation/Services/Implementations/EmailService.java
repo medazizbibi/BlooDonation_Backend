@@ -1,6 +1,6 @@
 package insat.bibiboussaid.bloodonation.Services.Implementations;
 
-import insat.bibiboussaid.bloodonation.Domain.EmailBody;
+import insat.bibiboussaid.bloodonation.Domain.Models.EmailBody;
 import insat.bibiboussaid.bloodonation.Services.Interfaces.IEmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;

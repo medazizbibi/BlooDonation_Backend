@@ -22,8 +22,8 @@ public class DonationRequest {
     private String phoneNumber;
     private String medicalCenter;
 
-    @ManyToOne(fetch= FetchType.LAZY)
-    @JsonManagedReference
-    private Donor personDonor;
+    @ManyToMany(fetch= FetchType.LAZY)
+    //@JsonManagedReference
+    private List<Donor> donors;
 
 }
