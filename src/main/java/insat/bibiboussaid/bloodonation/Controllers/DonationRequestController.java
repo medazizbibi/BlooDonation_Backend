@@ -52,7 +52,7 @@ public class DonationRequestController {
 
     @PostMapping("/sendEmail")
     public void deleteRequest(@RequestBody EmailBody body){
-    emailService.sendSimpleMessage(body.getTo(),body.getSubject(),body.getMessage());
+    emailService.sendSimpleMessage(body);
 
     }
 

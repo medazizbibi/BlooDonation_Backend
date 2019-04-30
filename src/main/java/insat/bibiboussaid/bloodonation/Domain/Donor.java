@@ -36,4 +36,8 @@ public class Donor {
     @OneToMany(mappedBy = "personDonor",fetch = FetchType.LAZY)
     @JsonBackReference
     List<DonationRequest> donationRequestList;
+
+    @OneToMany(mappedBy = "personDonor",fetch = FetchType.LAZY)
+    @JsonBackReference
+    List<Donation> donationsList;
 }

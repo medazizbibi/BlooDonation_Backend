@@ -4,10 +4,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -24,4 +21,8 @@ public class Donation {
     private String phoneNumber;
     private String medicalCenter;
     private String donorId;
+
+    @ManyToOne(fetch= FetchType.LAZY)
+    @JsonManagedReference
+    private Donor personDonor;
 }
